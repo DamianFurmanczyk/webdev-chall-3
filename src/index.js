@@ -5,7 +5,8 @@ import styles from "./styles.styl";
     hero = d.querySelector("#hero"),
     nav = d.querySelector("#nav"),
     burgerMenu = nav.querySelector("#nav-icon"),
-    navList = nav.querySelector(".nav-list");
+    navList = nav.querySelector(".nav-list"),
+    navLink = nav.querySelectorAll(".nav-list-link");
 
   const smoothMenu = w => {
     const heroOff = hero.getBoundingClientRect().top;
@@ -22,5 +23,24 @@ import styles from "./styles.styl";
   burgerMenu.addEventListener("click", function(e) {
     this.classList.toggle("open");
     navList.classList.toggle("active");
+  });
+
+  // link redirect
+
+  navLink.forEach((el, i) => {
+    const dest = el.getAttribute("href"),
+      destSection = d.querySelector(dest),
+      destSectionOffsetY =
+        destSection.offsetTop - destSection.scrollTop + destSection.clientTop;
+
+    el.addEventListener("click", e => {
+      e.preventDefault();
+      w.scrollTo(0, dest == "#home" ? 0 : destSectionOffsetY);
+
+      if (w.innerWidth <= 768) {
+        burgerMenu.classList.toggle("open");
+        navList.classList.toggle("active");
+      }
+    });
   });
 })(window);

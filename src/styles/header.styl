@@ -58,8 +58,11 @@ header.triggered
       text-decoration none
       font-size .8rem
       font-weight bolder
-      &:hover
-        color blackish
+      transition .2s
+      @media screen and (max-width: 768px)
+        &:hover
+          text-decoration: line-through solid blackish
+          color lighten(blackish, 30%) !important
 
 @keyframes toggle
   0%

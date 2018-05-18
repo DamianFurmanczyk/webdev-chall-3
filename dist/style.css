@@ -207,9 +207,16 @@ header.triggered .nav-list {
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: bolder;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
-.nav-list-link:hover {
-  color: #222;
+@media screen and (max-width: 768px) {
+  .nav-list-link:hover {
+    -webkit-text-decoration: line-through solid #222;
+            text-decoration: line-through solid #222;
+    color: #646464 !important;
+  }
 }
 .nav-div {
   padding-right: 20px;
