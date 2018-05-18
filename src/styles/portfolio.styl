@@ -1,0 +1,95 @@
+.portfolio
+  sectionWmargin()
+  background url('images/tablet.png') no-repeat center right
+
+  .container
+    max-width 1100 px
+
+  @media (max-width: 1100px)
+    background transparent
+
+  &-header
+    text-align center
+    heading()
+
+  &-small
+    sub()
+
+  &-content
+    margin-top 4rem
+    max-width 480px
+
+    @media (max-width: 1100px)
+      background transparent
+      max-width 100%
+      padding 0 120px
+      
+    @media screen and (max-width: 992px)
+      padding 0 90px
+
+    @media screen and (max-width: 676px)
+      padding 0 40px
+
+    &-heading
+      text-align left
+      margin-bottom 1rem
+
+    &-small
+      small(1rem)
+      letter-spacing: .3px
+
+  &-list
+    margin 2rem 0
+    padding 0 1rem
+    @media screen and (max-width: 992px)
+     margin 1.4rem 0
+
+    &-item
+      position relative
+      padding-left 90px
+      height 75px
+      display flex
+      justify-content center
+      flex-direction column
+      margin 2rem 0
+
+      @media screen and (max-width: 992px)
+          margin 0.5rem 0
+
+      p
+        small(.9rem)
+        margin-top .2rem
+
+
+    &-item:nth-of-type(1)::before
+      position absolute
+      content url('images/icon1.png')
+      transform translateX(-90px)
+
+    &-item:nth-of-type(2)::before
+      position absolute
+      content url('images/icon2.png')
+      transform translateX(-90px)
+
+    &-item:nth-of-type(3)::before
+      position absolute
+      content url('images/icon3.png')
+      transform translateX(-90px)
+
+  &-link-more
+    margin-top 2rem
+    display block
+    color green
+    text-decoration: none
+    text-transform uppercase
+    font-weight: bolder
+
+    &::after
+      margin-left 1rem
+      content url('images/arrow.png')
+
+    &:hover
+      color blackish
+
+      &::after
+        content url('images/arrow_black.png')

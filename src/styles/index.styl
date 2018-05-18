@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat')
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab')
+@require "reset.styl"
+@require "variables&mixins.styl"
+@require "header.styl"
+@require "hero.styl"
+@require "perks.styl"
+@require "perks2.styl"
+@require "portfolio.styl"
+@require "values.styl"
+@require "clients.styl"
+@require "contactNfooter.styl"
+
+// general styles
+
+body
+  font-family Montserrat, Verdana, sans-serif
+  color blackish
+
+.container
+  max-width 960px
+  margin 0 auto
+
+.section_m
+  sectionWmargin()
+
+.heading
+  heading()
+
+.clear::after
+  display table
+  content ''
+  clear both

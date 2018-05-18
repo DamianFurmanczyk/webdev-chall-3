@@ -1,0 +1,63 @@
+.values
+  background: lighten(whitish, 70%)
+  padding 5rem 0
+
+  h2
+    heading()
+
+  .container >  p
+    sub()
+    margin-bottom 3rem
+
+  &-row
+    display flex
+    justify-content: space-between
+    
+    @media screen and (max-width: 769px)
+      flex-direction: column
+      max-width 600px
+      margin 0 auto
+
+    &-column
+
+      .hr
+        position: relative
+
+      .img-div
+        margin 2rem auto
+        border-radius 50%
+        border 1px solid blackish
+        width 100px
+        height 100px
+        display flex
+        justify-content: center
+        align-items: center
+
+      h3
+        heading(1.2rem)
+
+      p
+        sub(.9rem)
+        padding 0 30px
+
+      &:last-of-type,
+      &:first-of-type
+
+        .hr::before
+          content: ''
+          position absolute
+          top 50%
+          height 2px
+          width 50%
+          background lightgray
+
+          @media screen and (max-width: 1100px)
+            display none
+
+      &:last-of-type
+        .hr::before
+          left -25%
+      &:first-of-type
+        .hr::before
+          right -25%
+        

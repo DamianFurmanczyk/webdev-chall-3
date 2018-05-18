@@ -1,0 +1,140 @@
+.contact
+  background green
+  padding 3rem 0
+  h1
+    heading()
+    max-width 720px
+    padding 0 30px
+    margin 0 auto
+    color #fff
+    line-height 1.4
+    margin-bottom 2rem
+  button
+    color white
+    background transparent
+    border 2px solid white
+    font-size 1.1rem
+    padding .4rem .7rem
+    border-radius: 5px
+    margin 0 auto
+    display flex
+    transition .33s ease-in
+    cursor pointer
+    &:hover
+      background white
+      color green
+
+.logos
+  ul
+    display flex
+    justify-content: space-around
+    li
+     padding 40px 10px
+     a
+     img
+      min-width 100%
+      @media screen and (max-width: 768px)
+          width 21%
+
+.footer
+  background blackish
+  color white
+  font-family 'Montserrat' !important
+  &-row
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      max-width 380px
+      margin 0 auto
+      
+    margin 0 auto !important
+    display flex
+    padding 3rem 1rem
+    justify-content: space-between
+  &-column
+    @media screen and (max-width: 768px)
+      padding 10px 15px
+
+    @media screen and (max-width: 992px)
+      padding 0 5px
+
+    flex 1 1 auto
+    padding 0 15px
+    font-size 1rem
+    line-height: 1.6
+    ul
+      margin-top 1rem
+      li
+        position relative
+        padding 14px 0
+        padding-left 40px
+        transition .25s ease
+        cursor pointer
+        &:hover
+          color green
+        &:hover > .time
+          color  white
+        img
+          position absolute
+          left 0
+          top 12px
+    &_tweets
+      max-width 320px
+      word-wrap break-word
+      .tweet-text
+        letter-spacing .02rem
+        font-weight 700
+
+  &-contact
+    background #fff
+    color blackish
+
+    small
+      @media screen and (min-width: 769px)
+        margin-top 39px
+        font-size .8rem
+        transform: translateY(-50%)
+        width 20%
+        float left
+
+      float none
+      text-align: center !important
+      display block
+      padding-top 30px
+
+    .justifying-div
+      display flex
+      justify-content space-around
+      width 60% !important
+      float left
+      @media screen and (max-width: 768px)
+        width 100% !important
+
+    &-list
+      @media screen and (max-width: 768px)
+        float none
+        margin 0 auto
+
+      padding 20px 0
+
+      &:hover &-item span
+        background lighten(blackish, 5%)
+
+      &-item
+        padding 0 5px
+        display inline-block
+        span
+          transition .15s ease
+          background: blackish 
+          border-radius 50%
+          padding 30px
+          display inline-block
+          position relative
+
+          &:hover
+            background: #000 !important
+
+          img
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
